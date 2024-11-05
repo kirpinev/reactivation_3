@@ -4,6 +4,9 @@ import { Typography } from "@alfalab/core-components/typography";
 
 import { appSt } from "./style.css";
 
+import read1 from "./assets/read1.jpeg";
+import read2 from "./assets/read2.jpg";
+import read3 from "./assets/read3.png";
 import { useEffect, useState } from "react";
 import { Gap } from "@alfalab/core-components/gap";
 import { StatusBadge } from "@alfalab/core-components/status-badge";
@@ -55,7 +58,7 @@ export const App = () => {
           </div>
         )}
 
-        <Gap size={success ? 72 : 40} />
+        <Gap size={40} />
 
         {success ? (
           <div
@@ -120,7 +123,7 @@ export const App = () => {
           </div>
         )}
 
-        <Gap size={success ? 96 : 40} />
+        <Gap size={40} />
 
         {error && (
           <div style={{ textAlign: "center" }}>
@@ -137,20 +140,133 @@ export const App = () => {
         {success && (
           <>
             <Typography.Text weight="bold" view="primary-large">
-              Приз!
+              Кэшбэк у партнеров
             </Typography.Text>
-            <Typography.Text weight="regular" view="primary-medium">
-              До 80% кэшбэка в Яндекс.Маркете
-            </Typography.Text>
+            <Gap size={24} />
+            <div className={appSt.gifts}>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img src={read3} alt="" className={appSt.giftImage} />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Литрес
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    20%
+                  </Typography.Text>
+                </div>
+              </div>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img src={read1} alt="" className={appSt.giftImage} />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Читай Город
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    10%
+                  </Typography.Text>
+                </div>
+              </div>
+              <div className={appSt.gift}>
+                <div className={appSt.imageWrapper}>
+                  <img
+                    src={read2}
+                    alt=""
+                    className={appSt.giftImage}
+                    style={{ transform: "scale(1.1)" }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <Typography.Text weight="regular" view="primary-large">
+                      Буквоед
+                    </Typography.Text>
+                    <Gap size={8} />
+                    <Typography.Text
+                      weight="regular"
+                      view="primary-small"
+                      color="secondary"
+                    >
+                      За оплату картой онлайн
+                    </Typography.Text>
+                  </div>
+
+                  <Typography.Text weight="regular" view="primary-large">
+                    10%
+                  </Typography.Text>
+                </div>
+              </div>
+            </div>
           </>
         )}
       </div>
 
-      <Gap size={40} />
+      <Gap size={96} />
 
       <div className={appSt.bottomBtnThx}>
         {success && (
-          <ButtonMobile block view="primary" href="">
+          <ButtonMobile block view="primary" href="https://alfa.me/cbpartner">
             Забрать приз
           </ButtonMobile>
         )}
