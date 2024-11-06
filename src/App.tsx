@@ -32,6 +32,12 @@ export const App = () => {
     });
   };
 
+  const clickInteraction = () => {
+    window.gtag("event", "game_interaction", {
+      variant_name: "reactivation_3",
+    });
+  };
+
   useEffect(() => {
     if (selected !== null) {
       if (selected === 32) {
@@ -123,6 +129,7 @@ export const App = () => {
                 }}
                 onClick={() => {
                   if (!isGameStopped) {
+                    clickInteraction();
                     setSelected(number);
                     setIsGameStopped(true);
                   }
