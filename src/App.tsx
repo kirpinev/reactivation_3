@@ -301,7 +301,7 @@ export const App = () => {
               setInitialNumbers(initialNumbers.sort(() => 0.5 - Math.random()));
             }}
           >
-            Сыграть еще
+            Сыграть ещё
           </ButtonMobile>
         )}
       </div>
