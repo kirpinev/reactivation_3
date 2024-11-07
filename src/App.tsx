@@ -62,14 +62,14 @@ export const App = () => {
         >
           {success
             ? "Поздравляем, вы выиграли приз!"
-            : "Посчитайте сумму всех цифр и выиграйте приз!"}
+            : "Сложите все числа и выиграйте приз"}
         </Typography.TitleResponsive>
 
         <Gap size={32} />
 
         {!success && (
           <div style={{ display: "flex", flexWrap: "wrap", gap: "3rem" }}>
-            {[12, 9, 4, 7].map((number) => (
+            {[12, "+", 9, "+", 4, "+", 7, "="].map((number) => (
               <Typography.Text weight="bold" view="primary-medium">
                 {number}
               </Typography.Text>
@@ -160,7 +160,7 @@ export const App = () => {
         {success && (
           <>
             <Typography.Text weight="bold" view="primary-large">
-              Кэшбэк у партнеров
+              Кэшбэк у партнёров
             </Typography.Text>
             <Gap size={24} />
             <div className={appSt.gifts}>
