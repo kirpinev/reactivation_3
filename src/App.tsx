@@ -68,7 +68,7 @@ export const App = () => {
         <Gap size={32} />
 
         {!success && (
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "3rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             {[12, "+", 9, "+", 4, "+", 7, "="].map((number) => (
               <Typography.Text weight="bold" view="primary-medium">
                 {number}
